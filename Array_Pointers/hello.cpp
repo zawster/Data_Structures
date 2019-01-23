@@ -16,7 +16,6 @@ class test{
                 cin>>*ptr;
                 temp=ptr;
                 ptr=ptr+1;
-
             }
            // cout<<"_______"<<endl;
             ptr=arr;

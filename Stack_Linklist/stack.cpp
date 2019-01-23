@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-int maxSize=6;       // maximum size of stack
 struct Node{
     int info;
     Node *next;
@@ -9,8 +8,12 @@ class Stack{
     private:
         Node *top,*temp;
         int c=0;
+        int maxSize;       // maximum size of stack
     public:
+
         Stack(){
+            cout<<"Maximum size of Stack : ";
+            cin>>maxSize;
             top=temp=NULL;
         }
         void push(int val){

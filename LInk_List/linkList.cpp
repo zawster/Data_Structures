@@ -16,7 +16,7 @@ class Link_List{
 
         void Insert_End(int x){
             if(head==NULL){
-                head=new Node();
+                head=new Node;
                 head->info=x;
                 head->link=NULL;
                 return;
@@ -24,7 +24,7 @@ class Link_List{
 
                 temp=head;
 
-                while(temp->link!=NULL){
+                while(temp->link != NULL){
                     temp=temp->link;
                 }
 
@@ -33,7 +33,7 @@ class Link_List{
                 temp->link->link=NULL;
         }
         void Insert_Start(int x){
-            temp=new Node();
+            temp=new Node;
             temp->info=x;
             temp->link=head;
             head=temp;
@@ -41,10 +41,10 @@ class Link_List{
 
         void Insert_Center(int loc,int x){
             temp=head;
-            temp2=new Node();
+            temp2=new Node;
             temp2->info=x;
-            while(temp!=NULL){
-                if(temp->info==loc){
+            while(temp != NULL){
+                if(temp->info == loc){
                     temp2->link=temp->link;
                     temp->link=temp2;
                     break;
@@ -69,6 +69,7 @@ class Link_List{
         void Delete_Start(){
             if(head->link==NULL){
                 delete head;
+                head=NULL;
             }
             else{
                 temp=head;
@@ -127,13 +128,13 @@ int main(){
     obj.Insert_End(3);
     obj.Insert_End(5);
     //      Insert Node at the Start
-   // obj.Insert_Start(1);
+    obj.Insert_Start(1);
     //      Insert Node in the Center
-   // obj.Insert_Center(3,4); // (after , value)
+    obj.Insert_Center(3,4); // (after , value)
     //      Dlete   Start , End and Centre
-    //obj.Delete_Start();
-   // obj.Delete_End();
-  //  obj.Delete_Centre(2);
+    obj.Delete_Start();
+    obj.Delete_End();
+    obj.Delete_Centre(2);
     //      Search a specific Node
     obj.Search(2);
     obj.Print();
